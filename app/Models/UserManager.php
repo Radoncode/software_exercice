@@ -109,7 +109,7 @@ class UserManager {
         return $this->db->resultSetAssoc();
     }
 
-    public function getTest($monthDate, $yearDate,$roleID, $employeeID){
+    public function getShootingDurationByYearAndMonthExceptCurrentMonth($monthDate, $yearDate,$roleID, $employeeID){
         $this->db->query("SELECT m.production_start_date, m.production_end_date,m.generated_income, r.fixe_income, r.percentage
                             FROM staff s
                                  LEFT JOIN role as r ON s.role_id = r.id 

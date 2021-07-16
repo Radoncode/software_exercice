@@ -142,7 +142,7 @@ class UserService {
              * Check if the personal production senior has played in previous movies except the current month and
              * add fixe income of this month and percentage of the generated revenue for this movie
              * */ 
-            $playedOtherMonth= $this->userManager->getTest($month, $year, self::PERSONAL_PRODUCTION_SENIOR, $this->employeeID);
+            $playedOtherMonth= $this->userManager->getShootingDurationByYearAndMonthExceptCurrentMonth($month, $year, self::PERSONAL_PRODUCTION_SENIOR, $this->employeeID);
             if($playedOtherMonth){
                 foreach($playedLastMonth as $value){
                    $salary = $salary + $played['fixe_income'] + ($played['generated_income'] * ($played['percentage'] / 100));
