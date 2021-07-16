@@ -1,0 +1,5 @@
+/vendor/
+/app/config/config.php
+.phpunit.result.cache
+/app/Tests/UserServiceTest.php
+
